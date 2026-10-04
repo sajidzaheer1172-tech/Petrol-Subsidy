@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Petrol Subsidy Pakistan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7f6;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #006633, #009966);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #006633;
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #006633;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #004d26;
+}
+
+.result {
+    margin-top: 18px;
+    padding: 15px;
+    background: #e8f7ef;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.info {
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    background: #003d26;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇵🇰 Petrol Subsidy Pakistan</h1>
+    <p>پٹرول سبسڈی، قیمت اور بچت کی معلومات</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>🛢️ Petrol Subsidy کیا ہے؟</h2>
+
+        <div class="info">
+            <p>
+            Petrol Subsidy ایک ایسا مالی طریقہ ہے جس میں حکومت
+            صارفین کے لیے پٹرول کی قیمت کو کم رکھنے کے لیے
+            مالی مدد فراہم کرتی ہے۔
+            </p>
+
+            <p>
+            اس ویب سائٹ کا مقصد پٹرول کی قیمت، سبسڈی اور
+            ممکنہ بچت کو آسان انداز میں سمجھانا ہے۔
+            </p>
+        </div>
+    </div>
+
+
+    <div class="card">
+
+        <h2>🧮 Petrol Subsidy Calculator</h2>
+
+        <label>پٹرول کی اصل قیمت فی لیٹر (Rs)</label>
+
+        <input type="number" id="originalPrice"
+        placeholder="مثلاً 300">
+
+
+        <label>سبسڈی فی لیٹر (Rs)</label>
+
+        <input type="number" id="subsidy"
+        placeholder="مثلاً 20">
+
+
+        <label>آپ کتنے لیٹر پٹرول خریدتے ہیں؟</label>
+
+        <input type="number" id="liters"
+        placeholder="مثلاً 50">
+
+
+        <button onclick="calculateSubsidy()">
+            حساب کریں
+        </button>
+
+
+        <div class="result" id="result">
+            نتیجہ یہاں ظاہر ہوگا
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>📊 آپ کی بچت</h2>
+
+        <div class="info">
+
+            <p>
+            اگر حکومت فی لیٹر ایک مخصوص رقم کی سبسڈی دیتی ہے
+            تو صارف کو فی لیٹر اتنی ہی رقم کم ادا کرنا پڑ سکتی ہے۔
+            </p>
+
+            <p>
+            Calculator میں اپنی قیمت اور سبسڈی درج کرکے
+            اندازاً اپنی کل بچت معلوم کریں۔
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🇵🇰 پاکستان میں پٹرول کی قیمت</h2>
+
+        <div class="info">
+
+            <p>
+            پٹرول کی قیمت وقتاً فوقتاً تبدیل ہو سکتی ہے۔
+            قیمت درج کرنے سے پہلے تازہ سرکاری اعلان ضرور چیک کریں۔
+            </p>
+
+            <p>
+            ہماری ویب سائٹ کا مقصد عوام کو پٹرول کی قیمت اور
+            سبسڈی کے حساب کو آسان بنانا ہے۔
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>© 2026 Petrol Subsidy Pakistan</p>
+
+    <p>Information & Calculator Website</p>
+
+</footer>
+
+
+<script>
+
+function calculateSubsidy() {
+
+    let originalPrice =
+        parseFloat(document.getElementById("originalPrice").value);
+
+    let subsidy =
+        parseFloat(document.getElementById("subsidy").value);
+
+    let liters =
+        parseFloat(document.getElementById("liters").value);
+
+
+    if (
+        isNaN(originalPrice) ||
+        isNaN(subsidy) ||
+        isNaN(liters)
+    ) {
+
+        document.getElementById("result").innerHTML =
+        "⚠️ براہ کرم تمام معلومات درج کریں۔";
+
+        return;
+    }
+
+
+    let finalPrice = originalPrice - subsidy;
+
+    let totalWithoutSubsidy =
+        originalPrice * liters;
+
+    let totalWithSubsidy =
+        finalPrice * liters;
+
+    let totalSaving =
+        subsidy * liters;
+
+
+    document.getElementById("result").innerHTML =
+
+    "فی لیٹر قیمت: Rs " +
+    finalPrice.toFixed(2) +
+
+    "<br><br>سبسڈی کے بغیر کل رقم: Rs " +
+    totalWithoutSubsidy.toFixed(2) +
+
+    "<br>سبسڈی کے بعد کل رقم: Rs " +
+    totalWithSubsidy.toFixed(2) +
+
+    "<br><br>💰 آپ کی کل بچت: Rs " +
+    totalSaving.toFixed(2);
+
+}
+
+</script>
+
+</body>
+</html>
